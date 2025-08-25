@@ -14,3 +14,12 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+<picture>
+  <!-- Use dark image when user prefers dark mode -->
+  <source media="(prefers-color-scheme: dark)" srcset="images/breakout-dark.svg" />
+  <!-- Use light image when user prefers light mode -->
+  <source media="(prefers-color-scheme: light)" srcset="images/breakout-light.svg" />
+  <!-- Fallback -->
+  <img alt="Breakout from my GitHub contributions" src="images/breakout-light.svg" />
+</picture>
