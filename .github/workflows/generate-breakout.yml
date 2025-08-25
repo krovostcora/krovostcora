@@ -1,0 +1,42 @@
+name: Generate Breakout SVG
+
+on:
+  schedule:
+    # Runs once per day at 00:00 UTC
+    - cron: "0 */24 * * *"
+  # Allow manual runs from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    permissions:
+      contents: write   # allow pushing images back to the repo
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create SVGs from contribution graph
+        uses: cyprieng/github-breakout@v1.0.0
+        with:
+          # Use the owner of this repo as the GitHub username
+          github_username: ${{ github.repository_owner }}
+
+      - name: Move SVGs into images/ folder
+        run: |
+          mkdir -p images
+          mv output/light.svg images/breakout-light.svg
+          mv output/dark.svg images/breakout-dark.svg
+
+      - name: Configure Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push (if changed)
+        run: |
+          git add images/breakout-light.svg images/breakout-dark.svg
+          git commit -m "chore: update breakout SVGs" || echo "No changes"
+          git push
