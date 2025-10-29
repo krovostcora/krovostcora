@@ -14,7 +14,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-### My portfolio site: [click on me!](https://orion-comet9.resiz.es/)
+### My portfolio site: [click on me!](https://star-pulse-9.resiz.es/)
 
 ---
 
