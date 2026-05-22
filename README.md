@@ -23,7 +23,7 @@ Here are some ideas to get you started:
   <img alt="Breakout from my GitHub contributions" src="images/breakout-light.svg" />
 </picture>
 
-### My portfolio site: [click on me!](https://star-pulse-9.resiz.es/)
+### My portfolio site: [click on me!](https://krovostcora.github.io/my-page2.0/en/)
 <img align='right' src='https://user-images.githubusercontent.com/5713670/87202985-820dcb80-c2b6-11ea-9f56-7ec461c497c3.gif' width='200"'>
 
 
